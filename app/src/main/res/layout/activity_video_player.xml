@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" style="@style/background"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:background="@color/blueCiel"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/header_logo"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:text="@string/title"
+            android:textColor="#373D3E"
+            android:textSize="35dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_infos"
+                style="@style/text.verytiny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_infos" />
+
+            <TextView
+                android:id="@+id/user"
+                style="@style/text.verytiny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:text="@string/user" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp">
+
+            <VideoView
+                android:id="@+id/mainVideoView"
+                android:layout_width="match_parent"
+                android:layout_height="497dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ProgressBar
+                android:id="@+id/buffer_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="200dp"
+                android:layout_height="240dp"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/mainVideoView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#B9000000"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/current"
+                    style="@style/text.big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_0_00" />
+
+                <ImageButton
+                    android:id="@+id/play_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:background="#92000000"
+                    android:contentDescription="@string/buttonplay_pause"
+                    app:srcCompat="@android:drawable/ic_media_play" />
+
+                <TextView
+                    android:id="@+id/duration"
+                    style="@style/text.big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_3_55" />
+
+                <FrameLayout
+                    android:id="@+id/full_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/image_full_screen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/fullscreenimagedesc"
+                        app:srcCompat="@drawable/fullscreenout" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commentZone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="#4D000000"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text.big"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#E87511"
+                        android:text="All Comments" />
+
+                    <ListView
+                        android:id="@+id/commentList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></ListView>
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        style="@style/text.center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#C6E87511"
+                        android:text="Add Your Comment"
+                        android:textColor="#FFFFFF" />
+
+                    <EditText
+                        android:id="@+id/videoCommentaireMessage"
+                        style="@style/text.dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="@string/comment"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine" />
+
+                    <Button
+                        android:id="@+id/videoCommentaireButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="100dp"
+                        android:onClick="sendComment"
+                        android:text="@string/envoyer"
+                        android:textColor="@color/white"
+                        app:backgroundTint="#E87511"
+                        app:cornerRadius="25dp" />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" android:layout_weight="1">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="53dp">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/desktop"
+                    android:id="@+id/imageView2"
+                    android:layout_weight="1" android:contentDescription="@string/footer_desktop"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" app:srcCompat="@drawable/mess" android:id="@+id/imageView3"
+                    android:layout_weight="1" android:contentDescription="@string/footer_chat"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/mob" android:id="@+id/imageView4"
+                    android:layout_weight="1" android:contentDescription="@string/footer_mobile"/>
+        </LinearLayout>
+        <TextView
+                android:text="@string/footer"
+                android:layout_width="match_parent"
+                android:layout_height="36dp" android:id="@+id/textView" style="@style/text.center.tiny.dark"/>
+    </LinearLayout>
+</LinearLayout>

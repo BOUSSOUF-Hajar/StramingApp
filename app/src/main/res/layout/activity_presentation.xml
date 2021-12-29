@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" style="@style/background"
+              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueCiel"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/header_logo"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:text="@string/title"
+            android:textColor="#373D3E"
+            android:textSize="35dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_infos"
+                style="@style/text.verytiny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_infos" />
+
+            <TextView
+                android:id="@+id/user"
+                style="@style/text.verytiny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:text="@string/user" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="05dp" android:layout_weight="6">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/text.verytiny"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="serif"
+                android:onClick="full"
+                android:text="See All"
+                android:textColor="#000000"
+
+                android:textSize="12dp"
+                app:backgroundTint="#FFFEFE"
+                app:cornerRadius="20dp" />
+            <Button
+                    android:text="Search Movies"  style="@style/text.verytiny"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:textColor="#000000"
+
+                app:cornerRadius="20dp"
+                android:textSize="12dp"
+                app:backgroundTint="#FFFEFE"
+                android:onClick="searchMovies"/>
+
+            <Button
+                style="@style/text.verytiny"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:onClick="searchSeries"
+                android:text="Search Series"
+
+                android:textColor="#000000"
+                android:textSize="12dp"
+                app:backgroundTint="#FFFEFE"
+
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView
+                    android:text="@string/all_movies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:background="#E87511" style="@style/text.clear.big"
+                android:id="@+id/textView3"
+                    />
+            <GridView
+                    android:layout_width="match_parent" android:numColumns="3"
+                    android:layout_height="match_parent" android:id="@+id/moviesView"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView
+                    android:text="@string/all_series"
+                    style="@style/text.clear.big"
+                     android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:background="#E87511"/>
+            <GridView android:numColumns="3"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:id="@+id/seriesView"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" android:layout_weight="1" android:layout_marginBottom="5dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="53dp" android:layout_weight="1">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/desktop"
+                    android:id="@+id/imageView2"
+                    android:layout_weight="1" android:contentDescription="@string/footer_desktop"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" app:srcCompat="@drawable/mess" android:id="@+id/imageView3"
+                    android:layout_weight="1" android:contentDescription="@string/footer_chat"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/mob" android:id="@+id/imageView4"
+                    android:layout_weight="1" android:contentDescription="@string/footer_mobile"/>
+        </LinearLayout>
+        <TextView
+                android:text="@string/footer"
+                android:layout_width="match_parent"
+                android:layout_height="36dp" android:id="@+id/textView" style="@style/text.center.tiny.dark"
+                android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

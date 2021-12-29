@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AppStreaming" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="background">
+        <item name="android:background">@drawable/background</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:typeface">serif</item>
+    </style>
+    <style name="text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:typeface">serif</item>
+    </style>
+    <style name="text.dark">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="text.clear">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="text.dark.center">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+    <style name="text.center">
+        <item name="android:layout_marginLeft">30dp</item>
+    </style>
+    <style name="text.center.tiny">
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="text.center.tiny.dark">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="text.dark.tiny">
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="text.verytiny">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="text.verytiny.dark">
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+    <style name="text.big">
+        <item name="android:textSize">40sp</item>
+    </style>
+    <style name="text.dark.big">
+        <item name="android:textSize">40sp</item>
+    </style>
+    <style name="text.clear.big">
+        <item name="android:textSize">40sp</item>
+    </style>
+</resources>
